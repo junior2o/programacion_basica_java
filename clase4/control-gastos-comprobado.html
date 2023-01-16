@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dinero; 
+        var gasto;
+
+        do {
+            dinero = prompt('Dime tu dinero');
+            dinero = parseFloat(dinero);
+            if(isNaN(dinero)) {
+                alert('No es un valor válido');
+            }
+        } while(isNaN(dinero));
+      
+        while(dinero > 0) {
+        do {
+            gasto = prompt('Dime tu gasto');
+            gasto = parseFloat(gasto);
+            if(isNaN(gasto)) {
+                alert('No es un valor válido');
+            }
+        } while(isNaN(gasto));
+            
+            dinero -= gasto; //dinero = dinero - gasto;
+            alert(`Te has gastado ${gasto} y te queda ${dinero}`);
+        }
+        
+    </script>
+    <h1> Te has quedado sin un duro</h1>
+</body>
+</html>
